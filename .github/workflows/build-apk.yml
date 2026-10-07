@@ -27,6 +27,7 @@ jobs:
       - name: Injecter la config du client
         run: |
           CONFIG="app/src/main/java/com/prompt2site/template/AppConfig.kt"
+          sed -i "s|com.prompt2site.client|com.prompt2site.$(echo '${{ inputs.app_name }}' | tr '[:upper:]' '[:lower:]' | tr -cd '[:alnum:]')|g" app/build.gradle.kts
           sed -i "s|__APP_NAME__|${{ inputs.app_name }}|g" "$CONFIG"
           sed -i "s|__THEME_COLOR__|${{ inputs.theme_color }}|g" "$CONFIG"
           sed -i "s|__TARGET_URL__|${{ inputs.target_url }}|g" "$CONFIG"
