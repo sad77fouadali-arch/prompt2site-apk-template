@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiramisu Spot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .cart-sidebar { transition: transform 0.3s ease-in-out; }
+    .cart-open { transform: translateX(0); }
+    .cart-closed { transform: translateX(100%); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header / Navigation -->
+  <header class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <a href="#accueil" class="text-2xl font-bold text-indigo-600">Tiramisu Spot</a>
+      <nav class="space-x-4 hidden md:block">
+        <a href="#accueil" class="hover:text-indigo-500 transition">Accueil</a>
+        <a href="#services" class="hover:text-indigo-500 transition">Services</a>
+        <a href="#produits" class="hover:text-indigo-500 transition">Boutique</a>
+        <a href="#contact" class="hover:text-indigo-500 transition">Contact</a>
+      </nav>
+      <button id="openCartBtn" class="relative">
+        <svg class="w-6 h-6 text-indigo-600 hover:text-indigo-800 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5h12.9M7 13l4 8m6-8l1.35 2.7a1 1 0 01-.9 1.5H9"/>
+        </svg>
+        <span id="cartCount" class="absolute -top-2 -right-2 bg-indigo-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+      </button>
+      <button id="navToggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Nav -->
+    <nav id="mobileNav" class="md:hidden hidden bg-white border-t border-gray-200">
+      <a href="#accueil" class="block px-4 py-2 hover:bg-gray-100">Accueil</a>
+      <a href="#services" class="block px-4 py-2 hover:bg-gray-100">Services</a>
+      <a href="#produits" class="block px-4 py-2 hover:bg-gray-100">Boutique</a>
+      <a href="#contact" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-20">
+
+    <!-- Accueil -->
+    <section id="accueil" class="bg-indigo-100 py-20">
+      <div class="container mx-auto text-center px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-indigo-800 animate-bounce">Bienvenue chez Tiramisu Spot 🍰</h1>
+        <p class="text-lg md:text-xl text-indigo-700 mb-8">Des tiramisus faits maison pour les jeunes et les familles.</p>
+        <a href="#produits" class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition">Voir nos produits</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">Nos Services</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="flex flex-col items-center text-center p-6 border rounded-lg hover:shadow-lg transition">
+            <div class="text-5xl mb-4">🚚</div>
+            <h3 class="font-medium text-xl mb-2">Livraison Rapide</h3>
+            <p>Livraison à domicile ou retrait à l'Université de Balbala.</p>
+          </div>
+          <div class="flex flex-col items-center text-center p-6 border rounded-lg hover:shadow-lg transition">
+            <div class="text-5xl mb-4">📞</div>
+            <h3 class="font-medium text-xl mb-2">Commande par WhatsApp</h3>
+            <p>Commandez directement via WhatsApp : <a href="https://wa.me/22577462184" class="text-indigo-600 hover:underline">+253 77 46 21 84</a></p>
+          </div>
+          <div class="flex flex-col items-center text-center p-6 border rounded-lg hover:shadow-lg transition">
+            <div class="text-5xl mb-4">🎉</div>
+            <h3 class="font-medium text-xl mb-2">Événements Familiaux</h3>
+            <p>Des desserts parfaits pour vos fêtes et réunions de famille.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produits -->
+    <section id="produits" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-12">Notre Boutique</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Produit 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div class="flex justify-center items-center h-48 bg-indigo-50 text-6xl">🍰</div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-semibold mb-2">Tiramisu classique</h3>
+              <p class="text-gray-600 mb-4">Tiramisus faits maison, saveur classique</p>
+              <p class="text-indigo-600 font-bold text-lg mb-4">1500 FD</p>
+              <button class="add-to-cart mt-auto bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+                      data-name="Tiramisu classique"
+                      data-price="1500"
+                      data-desc="Tiramisus faits maison, saveur classique">Ajouter au panier</button>
+            </div>
+          </div>
+          <!-- Produit 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div class="flex justify-center items-center h-48 bg-indigo-50 text-6xl">🥧</div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-semibold mb-2">Tiramisu pistache</h3>
+              <p class="text-gray-600 mb-4">Tiramisus faits maison, saveur pistache</p>
+              <p class="text-indigo-600 font-bold text-lg mb-4">2000 FD</p>
+              <button class="add-to-cart mt-auto bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+                      data-name="Tiramisu pistache"
+                      data-price="2000"
+                      data-desc="Tiramisus faits maison, saveur pistache">Ajouter au panier</button>
+            </div>
+          </div>
+          <!-- Produit 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <div class="flex justify-center items-center h-48 bg-indigo-50 text-6xl">🍫</div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="text-xl font-semibold mb-2">Tiramisu Nutella</h3>
+              <p class="text-gray-600 mb-4">Tiramisus faits maison, saveur Nutella</p>
+              <p class="text-indigo-600 font-bold text-lg mb-4">1800 FD</p>
+              <button class="add-to-cart mt-auto bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition"
+                      data-name="Tiramisu Nutella"
+                      data-price="1800"
+                      data-desc="Tiramisus faits maison, saveur Nutella">Ajouter au panier</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-lg">
+        <h2 class="text-3xl font-semibold text-center text-gray-800 mb-8">Contactez-nous</h2>
+        <form id="contactForm" class="space-y-4">
+          <div>
+            <label class="block text-gray-700">Nom</label>
+            <input type="text" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
+          </div>
+          <div>
+            <label class="block text-gray-700">Email</label>
+            <input type="email" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"/>
+          </div>
+          <div>
+            <label class="block text-gray-700">Message</label>
+            <textarea required rows="4" class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Envoyer</button>
+        </form>
+        <div class="mt-8 text-center">
+          <p class="text-gray-700"><strong>WhatsApp :</strong> <a href="https://wa.me/22577462184" class="text-indigo-600 hover:underline">+253 77 46 21 84</a></p>
+          <p class="text-gray-700"><strong>Retrait :</strong> Université de Balbala, porte principale</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg cart-sidebar cart-closed z-20">
+    <div class="flex items-center justify-between p-4 border-b">
+      <h3 class="text-lg font-semibold">Panier</h3>
+      <button id="closeCartBtn" class="text-gray-600 hover:text-gray-800">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div id="cartItems" class="p-4 overflow-y-auto flex-1">
+      <p class="text-gray-500 text-center">Le panier est vide.</p>
+    </div>
+    <div class="p-4 border-t">
+      <p class="flex justify-between font-bold text-lg"><span>Total :</span><span id="cartTotal">0 FD</span></p>
+      <button id="checkoutBtn" class="mt-4 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Passer la commande</button>
+    </div>
+  </aside>
+
+  <!-- Overlay -->
+  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-30 hidden z-10"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Navigation toggle (mobile)
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Cart functionality
+    const cart = [];
+    const cartCountEl = document.getElementById('cartCount');
+    const cartSidebar = document.getElementById('cartSidebar');
+    const overlay = document.getElementById('overlay');
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartTotalEl = document.getElementById('cartTotal');
+    const openCartBtn = document.getElementById('openCartBtn');
+    const closeCartBtn = document.getElementById('closeCartBtn');
+
+    function updateCartUI() {
+      // Update count
+      cartCountEl.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+      // Update items list
+      if (cart.length === 0) {
+        cartItemsEl.innerHTML = '<p class="text-gray-500 text-center">Le panier est vide.</p>';
+        cartTotalEl.textContent = '0 FD';
+        return;
+      }
+      let html = '<ul class="space-y-4">';
+      let total = 0;
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+        html += \`
+          <li class="flex justify-between items-center">
+            <div>
+              <p class="font-medium">\${item.name}</p>
+              <p class="text-sm text-gray-600">\${item.price} FD × \${item.qty}</p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <button data-index="\${index}" class="remove-item text-red-500 hover:text-red-700 transition">✖️</button>
+            </div>
+          </li>
+        \`;
+      });
+      html += '</ul>';
+      cartItemsEl.innerHTML = html;
+      cartTotalEl.textContent = total + ' FD';
+    }
+
+    // Open/close cart
+    function openCart() {
+      cartSidebar.classList.remove('cart-closed');
+      cartSidebar.classList.add('cart-open');
+      overlay.classList.remove('hidden');
+    }
+    function closeCart() {
+      cartSidebar.classList.remove('cart-open');
+      cartSidebar.classList.add('cart-closed');
+      overlay.classList.add('hidden');
+    }
+    openCartBtn.addEventListener('click', openCart);
+    closeCartBtn.addEventListener('click', closeCart);
+    overlay.addEventListener('click', closeCart);
+
+    // Add to cart buttons
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const name = btn.dataset.name;
+        const price = parseInt(btn.dataset.price);
+        const existing = cart.find(i => i.name === name);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ name, price, qty: 1 });
+        }
+        updateCartUI();
+        openCart();
+      });
+    });
+
+    // Remove item
+    cartItemsEl.addEventListener('click', e => {
+      if (e.target.classList.contains('remove-item')) {
+        const idx = parseInt(e.target.dataset.index);
+        cart.splice(idx, 1);
+        updateCartUI();
+      }
+    });
+
+    // Checkout (simple alert)
+    document.getElementById('checkoutBtn').addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Votre panier est vide.');
+        return;
+      }
+      const summary = cart.map(i => \`\${i.name} (\${i.qty}) - \${i.price * i.qty} FD\`).join('\\n');
+      alert('Commande résumée:\\n' + summary + '\\n\\nTotal: ' + cartTotalEl.textContent);
+      // Reset cart
+      cart.length = 0;
+      updateCartUI();
+      closeCart();
+    });
+
+    // Contact form (prevent default & simple feedback)
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Merci pour votre message ! Nous vous répondrons rapidement.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
