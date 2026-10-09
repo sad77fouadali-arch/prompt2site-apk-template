@@ -4,13 +4,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-        <application
-        android:label="__APP_NAME__"
-        android:allowBackup="true"
-        android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material.NoActionBar">
-
-        <activity
+          <application
+      android:label="__APP_NAME__"
+      android:icon="@mipmap/ic_launcher"
+     android:roundIcon="@mipmap/ic_launcher_round"
+     android:allowBackup="true"
+    android:supportsRtl="true"
+     android:theme="@android:style/Theme.Material.NoActionBar">
+                <activity
             android:name=".MainActivity"
             android:exported="true"
             android:configChanges="orientation|screenSize|keyboardHidden">
