@@ -32,6 +32,7 @@ jobs:
           sed -i "s|__THEME_COLOR__|${{ inputs.theme_color }}|g" "$CONFIG"
           sed -i "s|__TARGET_URL__|${{ inputs.target_url }}|g" "$CONFIG"
           sed -i "s|__APP_NAME__|${{ inputs.app_name }}|g" app/src/main/AndroidManifest.xml
+          sed -i "s|__THEME_COLOR__|${{ inputs.theme_color }}|g" app/src/main/res/values/colors.xml
 
       - uses: gradle/actions/setup-gradle@v3
         with:
