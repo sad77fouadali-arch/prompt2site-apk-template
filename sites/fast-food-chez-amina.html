@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAST FOOD CHEZ AMINA — Djibouti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .bg-primary { background-color: #000000; }
+    .text-primary { color: #FFD700; }
+    .hover-scale:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="font-sans text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-primary text-white sticky top-0 z-10 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold text-primary">FAST FOOD CHEZ AMINA</h1>
+      <nav class="space-x-4">
+        <a href="#accueil" class="hover:text-primary transition-colors">Accueil</a>
+        <a href="#services" class="hover:text-primary transition-colors">Services</a>
+        <a href="#produits" class="hover:text-primary transition-colors">Menu</a>
+        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Accueil -->
+  <section id="accueil" class="bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=1400&q=80');">
+    <div class="bg-black bg-opacity-60">
+      <div class="container mx-auto text-center py-32 text-white">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Bienvenue chez Amina</h2>
+        <p class="text-xl mb-8">Le meilleur fast‑food de Djibouti, moderne et épuré.</p>
+        <a href="#produits" class="bg-primary text-white px-6 py-3 rounded-full hover:bg-yellow-600 transition-colors">Voir le menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-primary mb-12">Nos Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow hover-scale text-center">
+          <div class="text-5xl mb-4">🚚</div>
+          <h3 class="text-xl font-semibold mb-2">Livraison gratuite</h3>
+          <p>Profitez de la livraison sans frais partout à Djibouti.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow hover-scale text-center">
+          <div class="text-5xl mb-4">🥤</div>
+          <h3 class="text-xl font-semibold mb-2">Boissons fraîches</h3>
+          <p>Jus de fruits, thé à la menthe et plus encore, préparés à la minute.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow hover-scale text-center">
+          <div class="text-5xl mb-4">🍔</div>
+          <h3 class="text-xl font-semibold mb-2">Qualité & rapidité</h3>
+          <p>Des burgers et snacks savoureux servis en un clin d’œil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Produits -->
+  <section id="produits" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-primary mb-12">Notre Menu</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Burger classique -->
+        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition-shadow hover-scale">
+          <div class="text-6xl mb-2">🍔</div>
+          <h3 class="text-xl font-semibold mb-1">Burger classique</h3>
+          <p class="text-gray-600 mb-2 text-center">Savoureux burger au bœuf, fromage et sauce spéciale.</p>
+          <span class="mt-auto font-bold text-primary text-lg">1500 FDJ</span>
+        </div>
+        <!-- Burger poulet crispy -->
+        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition-shadow hover-scale">
+          <div class="text-6xl mb-2">🍗</div>
+          <h3 class="text-xl font-semibold mb-1">Burger poulet crispy</h3>
+          <p class="text-gray-600 mb-2 text-center">Poulet croustillant, salade et mayo maison.</p>
+          <span class="mt-auto font-bold text-primary text-lg">2000 FDJ</span>
+        </div>
+        <!-- Sandwich thon -->
+        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition-shadow hover-scale">
+          <div class="text-6xl mb-2">🐟</div>
+          <h3 class="text-xl font-semibold mb-1">Sandwich thon</h3>
+          <p class="text-gray-600 mb-2 text-center">Thon frais, laitue et sauce citronnée.</p>
+          <span class="mt-auto font-bold text-primary text-lg">1000 FDJ</span>
+        </div>
+        <!-- Frites portion -->
+        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition-shadow hover-scale">
+          <div class="text-6xl mb-2">🍟</div>
+          <h3 class="text-xl font-semibold mb-1">Frites portion</h3>
+          <p class="text-gray-600 mb-2 text-center">Frites dorées, croustillantes à souhait.</p>
+          <span class="mt-auto font-bold text-primary text-lg">800 FDJ</span>
+        </div>
+        <!-- Jus de fruit frais -->
+        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition-shadow hover-scale">
+          <div class="text-6xl mb-2">🧃</div>
+          <h3 class="text-xl font-semibold mb-1">Jus de fruit frais</h3>
+          <p class="text-gray-600 mb-2 text-center">Mélange de fruits locaux pressés.</p>
+          <span class="mt-auto font-bold text-primary text-lg">1000 FDJ</span>
+        </div>
+        <!-- Thé à la menthe -->
+        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition-shadow hover-scale">
+          <div class="text-6xl mb-2">🍵</div>
+          <h3 class="text-xl font-semibold mb-1">Thé à la menthe</h3>
+          <p class="text-gray-600 mb-2 text-center">Thé vert rafraîchissant à la menthe.</p>
+          <span class="mt-auto font-bold text-primary text-lg">500 FDJ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 max-w-lg">
+      <h2 class="text-3xl font-bold text-center text-primary mb-8">Contactez‑nous</h2>
+      <form id="contactForm" class="bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-1" for="name">Nom</label>
+          <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" type="text" id="name" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-1" for="email">Email</label>
+          <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" type="email" id="email" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-1" for="message">Message</label>
+          <textarea class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-primary text-white py-2 rounded hover:bg-yellow-600 transition-colors">Envoyer</button>
+        <p id="formMsg" class="mt-4 text-center text-sm hidden"></p>
+      </form>
+      <div class="mt-8 text-center">
+        <p class="text-lg"><strong>Tél :</strong> 77 45 67 89</p>
+        <p class="text-lg"><strong>Livraison gratuite</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-4">
+    <div class="container mx-auto text-center">
+      © 2026 FAST FOOD CHEZ AMINA — Djibouti. Tous droits réservés.
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Form validation & feedback
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Simple validation (already HTML5 required)
+      msg.textContent = 'Merci! Votre message a été envoyé.';
+      msg.classList.remove('hidden');
+      msg.classList.add('text-green-600');
+      form.reset();
+      setTimeout(() => {
+        msg.classList.add('hidden');
+      }, 4000);
+    });
+  </script>
+</body>
+</html>
