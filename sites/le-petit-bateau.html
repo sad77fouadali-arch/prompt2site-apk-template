@@ -6,155 +6,156 @@
   <title>Le Petit Bateau</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .hover-scale:hover {
-      transform: scale(1.05);
-    }
-    .fade-in {
-      animation: fadeIn 0.8s ease-out forwards;
-      opacity: 0;
-    }
     @keyframes fadeIn {
-      to { opacity: 1; }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+    .animate-fade { animation: fadeIn 0.8s ease-out forwards; }
+    .nav-link:hover { color: #1e3a8a; }
   </style>
 </head>
-<body class="font-sans antialiased bg-gray-50 text-gray-800">
+<body class="font-sans text-gray-800 bg-white">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-10">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-2xl font-bold text-indigo-600">Le Petit Bateau</h1>
-      <nav class="space-x-4">
-        <a href="#home" class="text-gray-600 hover:text-indigo-600 transition">Accueil</a>
-        <a href="#services" class="text-gray-600 hover:text-indigo-600 transition">Services</a>
-        <a href="#products" class="text-gray-600 hover:text-indigo-600 transition">Produits</a>
-        <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
-      </nav>
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-blue-900">Le Petit Bateau</a>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="#accueil" class="nav-link text-gray-700 hover:text-blue-900 transition">Accueil</a></li>
+        <li><a href="#services" class="nav-link text-gray-700 hover:text-blue-900 transition">Services</a></li>
+        <li><a href="#produits" class="nav-link text-gray-700 hover:text-blue-900 transition">Produits</a></li>
+        <li><a href="#contact" class="nav-link text-gray-700 hover:text-blue-900 transition">Contact</a></li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
   <!-- Accueil -->
-  <section id="home" class="bg-indigo-600 text-white py-20">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-4 fade-in">Bienvenue au Petit Bateau</h2>
-      <p class="text-lg mb-6 fade-in">Savourez les meilleurs poissons et fruits de mer de Djibouti dans un cadre moderne et épuré.</p>
-      <a href="#products" class="inline-block bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition fade-in">Voir nos plats</a>
+  <section id="accueil" class="pt-20 bg-blue-900 text-white min-h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80')] bg-cover bg-center">
+    <div class="bg-blue-900 bg-opacity-70 p-8 rounded-lg text-center max-w-xl animate-fade">
+      <h1 class="text-4xl font-extrabold mb-4">Bienvenue au <span class="text-yellow-300">Petit Bateau</span></h1>
+      <p class="text-lg mb-6">Le meilleur des fruits de mer à Djibouti.</p>
+      <a href="#produits" class="inline-block bg-yellow-400 text-blue-900 font-semibold py-2 px-4 rounded hover:bg-yellow-500 transition">Voir le menu</a>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-indigo-600 mb-8">Nos Services</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Service à emporter</h3>
-          <p>Commandez rapidement et repartez avec vos plats préférés.</p>
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-blue-900 mb-8 animate-fade">Nos Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 border rounded-lg hover:shadow-lg transition transform hover:-translate-y-1 animate-fade">
+          <div class="text-5xl mb-4 text-center">🍽️</div>
+          <h3 class="text-xl font-semibold text-center mb-2">Service à table</h3>
+          <p class="text-center text-gray-600">Profitez d'un cadre moderne et épuré avec une vue sur le port.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Service sur place</h3>
-          <p>Profitez d’une ambiance chaleureuse avec vue sur la mer.</p>
+        <div class="p-6 border rounded-lg hover:shadow-lg transition transform hover:-translate-y-1 animate-fade">
+          <div class="text-5xl mb-4 text-center">🛍️</div>
+          <h3 class="text-xl font-semibold text-center mb-2">Emporté & Livraison</h3>
+          <p class="text-center text-gray-600">Commandez et dégustez nos spécialités où vous voulez.</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Livraison locale</h3>
-          <p>Nous livrons dans tout Djibouti en moins de 30 minutes.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Événements privés</h3>
-          <p>Réservez notre espace pour vos fêtes et réunions.</p>
+        <div class="p-6 border rounded-lg hover:shadow-lg transition transform hover:-translate-y-1 animate-fade">
+          <div class="text-5xl mb-4 text-center">🎉</div>
+          <h3 class="text-xl font-semibold text-center mb-2">Événements privés</h3>
+          <p class="text-center text-gray-600">Réservez pour vos anniversaires ou réunions d'affaires.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Produits -->
-  <section id="products" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-indigo-600 mb-12">Nos Délices</h2>
+  <section id="produits" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-blue-900 mb-12 animate-fade">Notre Carte</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Produit 1 -->
-        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition hover-scale">
-          <div class="text-5xl mb-4">🐟</div>
-          <h3 class="font-semibold text-lg text-center mb-2">Poisson grillé du jour</h3>
-          <p class="text-indigo-600 font-bold mb-2">3500 FDJ</p>
-          <p class="text-center text-gray-600">Poisson grillé du jour au choix du chef</p>
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform animate-fade">
+          <div class="text-6xl mb-4">🐟</div>
+          <h3 class="font-semibold text-lg mb-2 text-center">Poisson grillé du jour</h3>
+          <p class="text-gray-600 text-center mb-3">Poisson grillé du jour au restaurant</p>
+          <span class="mt-auto font-bold text-blue-900">3500 FDJ</span>
         </div>
         <!-- Produit 2 -->
-        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition hover-scale">
-          <div class="text-5xl mb-4">🐠</div>
-          <h3 class="font-semibold text-lg text-center mb-2">Thon braisé avec riz</h3>
-          <p class="text-indigo-600 font-bold mb-2">3000 FDJ</p>
-          <p class="text-center text-gray-600">Thon braisé avec riz, savoureux et frais</p>
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform animate-fade">
+          <div class="text-6xl mb-4">🐟</div>
+          <h3 class="font-semibold text-lg mb-2 text-center">Thon braisé avec riz</h3>
+          <p class="text-gray-600 text-center mb-3">Thon braisé avec riz au restaurant</p>
+          <span class="mt-auto font-bold text-blue-900">3000 FDJ</span>
         </div>
         <!-- Produit 3 -->
-        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition hover-scale">
-          <div class="text-5xl mb-4">🍤</div>
-          <h3 class="font-semibold text-lg text-center mb-2">Crevettes sautées</h3>
-          <p class="text-indigo-600 font-bold mb-2">4000 FDJ</p>
-          <p class="text-center text-gray-600">Crevettes sautées, délicates et parfumées</p>
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform animate-fade">
+          <div class="text-6xl mb-4">🍤</div>
+          <h3 class="font-semibold text-lg mb-2 text-center">Crevettes sautées</h3>
+          <p class="text-gray-600 text-center mb-3">Crevettes sautées du jour au restaurant</p>
+          <span class="mt-auto font-bold text-blue-900">4000 FDJ</span>
         </div>
         <!-- Produit 4 -->
-        <div class="border rounded-lg p-4 flex flex-col items-center hover:shadow-lg transition hover-scale">
-          <div class="text-5xl mb-4">🍹</div>
-          <h3 class="font-semibold text-lg text-center mb-2">Jus de fruit frais</h3>
-          <p class="text-indigo-600 font-bold mb-2">1000 FDJ</p>
-          <p class="text-center text-gray-600">Jus de fruit frais, rafraîchissant et naturel</p>
+        <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform animate-fade">
+          <div class="text-6xl mb-4">🥤</div>
+          <h3 class="font-semibold text-lg mb-2 text-center">Jus de fruit frais</h3>
+          <p class="text-gray-600 text-center mb-3">Jus de fruit frais au restaurant</p>
+          <span class="mt-auto font-bold text-blue-900">1000 FDJ</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 bg-gray-100">
-    <div class="max-w-2xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-indigo-600 mb-8">Contactez-nous</h2>
-      <form id="contactForm" class="space-y-4 bg-white p-6 rounded-lg shadow">
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="name">Nom</label>
-          <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" type="text" id="name" required>
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-blue-900 mb-8 animate-fade">Contactez-nous</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <p class="flex items-center"><span class="mr-2">📍</span> Boulevard de la République, Djibouti</p>
+          <p class="flex items-center"><span class="mr-2">📞</span> 77 62 62 16</p>
+          <p class="flex items-center"><span class="mr-2">✉️</span> contact@lepetitbateau.dj</p>
         </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email</label>
-          <input class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" type="email" id="email" required>
-        </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1" for="message">Message</label>
-          <textarea class="w-full border border-gray-300 rounded px-3 py-2 h-32 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="message" required></textarea>
-        </div>
-        <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-2 rounded hover:bg-indigo-700 transition">Envoyer</button>
-      </form>
-      <div class="mt-8 text-center">
-        <p class="text-gray-700"><strong>Adresse :</strong> Boulevard de la République</p>
-        <p class="text-gray-700"><strong>Téléphone :</strong> 77 62 62 16</p>
+        <form id="contactForm" class="space-y-4">
+          <div>
+            <label class="block mb-1 font-medium">Nom</label>
+            <input type="text" name="name" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block mb-1 font-medium">Email</label>
+            <input type="email" name="email" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block mb-1 font-medium">Message</label>
+            <textarea name="message" rows="4" required class="w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+          <button type="submit" class="bg-blue-900 text-white font-semibold py-2 px-4 rounded hover:bg-blue-800 transition">Envoyer</button>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-indigo-600 text-white py-4">
-    <div class="max-w-7xl mx-auto text-center">
-      © 2024 Le Petit Bateau – Tous droits réservés.
+  <footer class="bg-blue-900 text-white py-4">
+    <div class="max-w-6xl mx-auto text-center">
+      © 2026 Le Petit Bateau - Tous droits réservés.
     </div>
   </footer>
 
   <!-- JavaScript -->
   <script>
-    // Form validation & submission feedback
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
 
-      if (name && email && message) {
-        alert(`Merci ${name} ! Votre message a bien été envoyé.`);
-        this.reset();
-      } else {
-        alert('Veuillez remplir tous les champs du formulaire.');
-      }
+    // Simple contact form handling
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Merci pour votre message ! Nous vous répondrons rapidement.');
+      this.reset();
     });
   </script>
 </body>
